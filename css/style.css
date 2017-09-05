@@ -1,2 +1,107 @@
+/* Configuration de départ de la page */
+body {
+    background-color: #EEEEEE;
+    margin: 0;
+    color: #000002;
+    font-size: 20px;
+} 
+a {
+    color: #000002;
+}
+main {
+    margin: 0 auto;
+    border: solid 1px #999999;
+    width: 1350px;
+    overflow-x: scroll;
+}
+main, header {
+    width: 1350px;
+    background-color: #FFFFFF;
+}
+li, a {
+    text-decoration: none;
+    list-style: none;
+}
+.section-title {
+    color: #FF0066;
+}
+.content {
+     margin: 210px 20px 15px 20px;
+}
+
+/* header */
+header {
+    position: fixed;
+    text-align: center;
+}
+@media only screen and (max-width : 1350px) {
+    header {
+        width: 100%;
+    }
+}
+h1 {
+    background-color: #EEEEEE;
+    border: solid 1px #000000;
+    margin: 20px;
+}
+header li {
+    display: inline-block;
+    background-color: #669ACC;
+    width: 23%;
+    color: #ffffff;
+    font-size: 20px;
+    padding: 5px;
+}
+header .active li {
+    background-color: #000000;
+}
+/* Utilisation d'after car le border-bottom n'est pas compatible sur certains devices */
+header .main-nav::after {
+    content: "";
+    color: black;
+    width: 97%;
+    border: solid 2px;
+    display: inline-block;
+}
+
+/* article */
+.article-img {
+    float: right;
+}
+
+/* aside */
+.aside-title {
+    background-color: #6691CC;
+    color: #FFFFFF;
+    font-weight: lighter;
+    padding: 5px;
+}
+.aside-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.aside-table thead tr th:first-of-type {
+    border: none;
+    background-color: white;
+}
+.aside-table caption {
+    color: #FE0269;
+    font-weight: bold;
+    padding: 10px 0;
+}
+.aside-table th, .aside-table td {
+    border: solid 1px #000000;
+    text-align: center;
+}
+.aside-table th {
+    background-color: #DDDDDD;
+}
 
 
+/* item list */
+.item-list li ul {
+    display: none;
+}
+.item-list .active ul {
+    display: block;
+}
