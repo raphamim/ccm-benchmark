@@ -14,7 +14,7 @@ main {
     width: 1350px;
     overflow-x: scroll;
 }
-main, header {
+main, header, footer {
     width: 1350px;
     background-color: #FFFFFF;
 }
@@ -26,13 +26,15 @@ li, a {
     color: #FF0066;
 }
 .content {
-     margin: 210px 20px 15px 20px;
+     margin: 210px 20px 65px 20px;
+     background-image: url(../img/bg.gif);
 }
 
 /* header */
 header {
     position: fixed;
     text-align: center;
+    margin-top: -1px;
 }
 @media only screen and (max-width : 1350px) {
     header {
@@ -76,6 +78,7 @@ header .main-nav::after {
     font-weight: lighter;
     padding: 5px;
 }
+/* --- tableau --- */
 .aside-table {
     width: 100%;
     border-collapse: collapse;
@@ -96,7 +99,64 @@ header .main-nav::after {
 .aside-table th {
     background-color: #DDDDDD;
 }
-
+.aside-table td {
+    background-color: #FFFFFF;
+}
+.aside-table tfoot th {
+    background-color: #FF0066;
+}
+.aside-table tfoot td {
+    background-color: #FFCCCB;
+}
+/* --- formulaire --- */
+aside form fieldset {
+    border-color: #FF0066;
+    border-style: solid;
+    width: 70%;
+    display: inline-block;
+    background-color: #FFFFFF;
+}
+aside form .form-control {
+    display: inline-block;
+    vertical-align: calc(100px);
+    margin-left: 20px;
+}
+aside form .form-control input {
+    border: none;
+    background-color: #FF0066;
+    color: #FFFFFF;
+    font-size: 22px;
+    padding: 5px 15px;
+}
+aside form fieldset legend {
+    color: #FF0066;
+    padding-bottom: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+aside form .following {
+    display: block;
+}
+aside form .following:first-of-type {
+    margin: 5px 23px;
+}
+aside form .following:nth-of-type(3) {
+    margin: 5px 65px;
+}
+aside form .following select {
+    font-size: 20px;
+    padding: 1px;
+}
+aside form .following label {
+    vertical-align: top;
+}
+aside form .following textarea {
+    width: 455px;
+}
+aside form .following input,
+aside form .following select {
+    width: 450px;
+}
 
 /* item list */
 .item-list li ul {
@@ -104,4 +164,40 @@ header .main-nav::after {
 }
 .item-list .active ul {
     display: block;
+}
+
+/* footer */
+footer .footer-nav::before {
+    content: "";
+    color: black;
+    width: 97%;
+    border: solid 2px;
+    display: inline-block;
+}
+.footer-nav {
+    margin: 0 20px;
+}
+footer {
+    position: fixed;
+    bottom: 0;
+}
+footer p {
+    left: 20px;
+    position: relative;
+    display: inline-block;
+    right: 20px;
+    margin: 5px 0;
+}
+footer a {
+    position: absolute;
+    display: inline-block;
+    right: 80px;
+    margin: 5px 0;
+    color: #FF0066;
+    text-decoration: underline;
+}
+@media only screen and (max-width : 1350px) {
+    footer {
+        width: 100%;
+    }
 }
